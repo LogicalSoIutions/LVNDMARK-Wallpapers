@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LVNDMARK's Mobile Wallpapers</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center" id="wallpapersContainer"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const images = [
+        {path: "mobile/1.png"},
+        {path: "mobile/2.png"},
+        {path: "mobile/3.png"},
+        {path: "mobile/4.png"},
+        {path: "mobile/5.png"},
+        {path: "mobile/6.png"},
+        {path: "mobile/7.png"},
+        {path: "mobile/8.png"},
+        {path: "mobile/9.png"},
+        {path: "mobile/10.png"},
+        {path: "mobile/11.png"},
+        {path: "mobile/12.png"},
+        {path: "mobile/13.png"},
+        ];
+        function displayImages() {
+            const container = document.getElementById('wallpapersContainer');
+            images.forEach((image) => {
+                const col = document.createElement('div');
+                col.className = 'col-md-4 mb-4';
+                col.innerHTML = `
+                    <div class="card">
+                        <a href="${image.path}" target="_blank">
+                            <img src="${image.path}" class="card-img-top">
+                        </a>
+                    </div>
+                `;
+                container.appendChild(col);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', displayImages);
+    </script>
+</body>
+
+</html>
