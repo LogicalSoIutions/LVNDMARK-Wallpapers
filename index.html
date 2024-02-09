@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Options</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h2>Select Wallpaper Resolution</h2>
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action" onclick="loadWallpapers('mobile')">Mobile</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="loadWallpapers('1080p')">1080p</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="loadWallpapers('1440p')">1440p</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="loadWallpapers('3440x1440')">3440x1440</a>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function loadWallpapers(resolution) {
+            console.log('Loading wallpapers for:', resolution);
+            alert('Load wallpapers for ' + resolution); 
+        }
+    </script>
+</body>
+</html>
