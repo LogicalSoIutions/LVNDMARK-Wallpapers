@@ -1,0 +1,26 @@
+<html>
+<div id="timeDifference"></div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const origin = new Date('2022-07-26');
+    const target = new Date(); // gets the current date
+    const interval = new Date(target - origin);
+
+    const years = interval.getUTCFullYear() - 1970; // because the epoch year is 1970
+    const months = interval.getUTCMonth(); // month is 0-indexed
+    const days = interval.getUTCDate() - 1; // day starts at 1
+
+    let message = '';
+
+    if (years > 1) {
+        message += `${years} years `;
+    } else if (years === 1) {
+        message += `1 year `;
+    }
+
+    if (months > 0) {
+        message += `and ${months} months `;
+    }
+    document.getElementById('timeDifference').innerText = message;
+});
+</script>
